@@ -1,0 +1,172 @@
+.todo{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    height: 90vh;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(201, 201, 201, 0.3);
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    margin-top: 2rem;
+
+    &__h1{
+        font-size: 2rem;
+        margin: 1rem 0;
+    }
+
+    &__h2{
+        font-size: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    &__form{
+        width: 100%;
+        margin-bottom: 1rem;
+        display: flex;
+        align-items: center;
+        height: 40px;
+        justify-content: space-between;
+        padding: 0 1rem;
+
+        &__input{
+            width: 100%;
+            font-size: 18px;
+            padding-left: 5px;
+            height: 100%;
+            border: 1px solid rgb(170, 170, 170);
+            border: none;
+            border-bottom: 1px solid black;
+        }
+
+        &__button{
+            @include flex;
+            margin-left: 1rem;
+            height: 100%;
+            padding: 0 3rem;
+            cursor: pointer;
+            text-transform: capitalize;
+            background-color: black;
+            border-radius: 2px;
+            color: white;
+            border: 1px solid black;
+            outline: 1px solid;
+            box-sizing: border-box;
+            transition: 0.25s;
+            box-shadow: 0px 0px 3px black;
+            
+            &:hover{
+                background-color: white;
+                color: black;
+            }
+        }
+    }
+
+    &__listTasks{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 50%;
+        overflow: scroll;
+
+        &__task{
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            padding: 0.5rem 1rem;
+
+            &:not(:last-child){
+                border-bottom: 1px solid black;
+            }
+
+            &__left{
+                display: flex;
+                align-items: center;
+                
+                input{
+                    margin-right: 1rem;
+                    @include wh(1.5rem);
+                    border-radius: 50%;
+                    appearance: none;
+                    border: 1px solid black;
+                    cursor: pointer;
+                    background-color: transparent;
+                    transition: 0.25s;
+
+                    &:checked{
+                        background-color: rgb(0, 0, 0);
+                    }
+                }
+            }
+
+            &__right{
+                button{
+                    margin-left: 1rem;
+                    height: 100%;
+                    padding: 0.5rem 1rem;
+                    cursor: pointer;
+                    text-transform: capitalize;
+                    background-color: black;
+                    color: white;
+                    border: 1px solid black;
+                    border-radius: 2px;
+                    transition: 0.25s;
+                    box-shadow: 0px 0px 3px black;
+                    
+                    &:hover{
+                        background-color: white;
+                        color: black;
+                    }
+
+                    &:first-child{
+                        margin-right: 1rem;
+                    }
+                }
+                
+            }
+        }
+
+        &__editTask{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem;
+
+            input{
+                width: 100%;
+                border: none;
+                border-bottom: 1px solid black;
+            }
+            
+            button{
+                margin-left: 1rem;
+                height: 100%;
+                padding: 0.5rem 1rem;
+                cursor: pointer;
+                text-transform: capitalize;
+                background-color: black;
+                color: white;
+                border: 1px solid black;
+                border-radius: 2px;
+                transition: 0.25s;
+                box-shadow: 0px 0px 3px black;
+                
+                &:hover{
+                    background-color: white;
+                    color: black;
+                }
+            }
+        }
+    }
+}
+
+.checked{
+    background-color: #dee1ec;
+    text-decoration: dashed;
+    width: 100%;
+    margin: 0;
+    transition: 0.25s;
+    opacity: 0.5;
+}

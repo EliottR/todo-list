@@ -1,13 +1,18 @@
-import ContainerTask from './Components/ContainerTask'
+import { AddTask } from "./components/AddTask";
+import { CompletedTaskList } from "./components/CompletedTaskList";
+import { EditTask } from "./components/EditTask";
+import { TaskList } from "./components/TaskList";
 
-function App() {
-
+const App = () => {
   return (
-    <div className="App">
-      <h1 className='App__h1'>To-Do List</h1>
-      <ContainerTask />
+    <div className="todo">
+      <h1 className="todo__h1">Toutes vos tâches</h1>
+      <AddTask />
+      <TaskList />
+      <h2 className="todo__h2">Tâches complétées</h2>
+      <CompletedTaskList />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;

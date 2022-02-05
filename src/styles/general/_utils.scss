@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #eceffc;
+}
+
+@mixin wh($width, $height: $width){
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($justify: center, $align: center){
+    display: flex;
+    justify-content: $justify;
+    align-items: $align ;
+}
