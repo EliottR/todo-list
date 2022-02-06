@@ -1,6 +1,5 @@
 import { AddTask } from "./components/AddTask";
 import { CompletedTaskList } from "./components/CompletedTaskList";
-import { EditTask } from "./components/EditTask";
 import { TaskList } from "./components/TaskList";
 
 const App = () => {

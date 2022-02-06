@@ -10,7 +10,7 @@ export const AddTask = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (task != "") {
+        if (task !== "") {
             dispatch(addTodo({
                 title: task,
             }))
